@@ -1,0 +1,21 @@
+@media screen and (max-width: 720px){
+  header{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .abrirboton{
+    display: block;
+    cursor: pointer;
+
+  }
+  nav{
+    flex-wrap: wrap;
+  }
+  nav ul{
+    order: 3;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+}

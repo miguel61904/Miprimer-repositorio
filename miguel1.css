@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background-image: url("assets/img/encabezado.png");
+}
+.contenedor{
+  background: black;
+  width: 100%;
+
+
+  /* flex*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.abrirboton{
+  display: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li{
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+}
+.menu ul li::before{
+  content: "";
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  transition: 0.4s ease-out;
+}
+.menu ul li:hover::before{
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.navegacion{
+  width: 100%;
+}
+nav{
+  color: white;
+}
+header{
+  color: white;
+  background-color: #353535;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.fondo{
+  width: 100%;
+}
+
+.menu{
+  color: white;
+}
+.fondo img{
+ width: 100%;
+}
+.imagenes{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.mifoto{
+  position: absolute;
+  width: 250px;
+  top: 200px;
+  align-items: center;
+}
+.logo{
+  height: 200px;
+  border-radius: 50%;
+}
+
+.encabezado{
+  text-align: center;
+  height: 350px;
+  width: 100%;
+  background-image: url("assets/img/codigojs.jpg");
+  position: absolute;
+  flex-direction: row;
+}
+h1{
+  color:white;
+  justify-content: center;
+  align-content: center;
+}
+.cseccion{
+  position: relative;
+  display: flex;
+  height: 800px;
+  width: 100%;
+  
+}
+.servicios{ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 500px;
+  width: 98%;
+  margin-left: 15px;
+  
+  border: solid;
+  border-color: white;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: 100px;
+  background-color: rgba(255,255,255, .5)
+}
+.dd{
+  height: 50px;
+  width: 50px;
+}
+.disco{
+  text-align: center;
+  width: 100%;
+  height: 70%;
+  margin-right: 50px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.porta{
+  height: 50px;
+  width: 50px;
+}
+.escri{
+  height: 50px;
+  width: 50px;
+}
+.serh3{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.serh3 img{
+  height: 70%;
+  margin: 10px;
+  border-radius: 5px;
+}
+.tecnologias{
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cont{
+ width: 330px;
+ height: 430px;
+ border-radius: 8px;
+ box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+ overflow: hidden;
+ margin: 20px;
+ text-align: center;
+ transition: all 0.25s;
+ background-color: rgba(255,255,255,0.5);
+}
+.cont:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.cont img{
+  width: 250px;
+  height: 220px;
+}
+.cont h4{
+  font-weight: 600;
+  color: white;
+}
+.cont p{
+  margin-top: 15px;
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+}
+.cont a{
+  font-weight: 500;
+  text-decoration: none;
+  color: blue;
+}
