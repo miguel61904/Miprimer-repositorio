@@ -67,13 +67,14 @@ function createTable(usersList){
             let usersEmail = document.createElement("td");
             usersEmail = document.createElement("td");
             usersEmail.innerText = usersList[i].email;
+            let socialcontainer = document.createElement("div")
 
             newRow.appendChild(usersName);
             newRow.appendChild(userAge);
             newRow.appendChild(usersEmail);
             for(let j = 0; j <users[i].social.length; j++){
                 let userSocial = document.createElement("td");
-                userSocial.innerText = users[i].social[j];
+                userSocial.innerText = users[i].social[j].url;
                 newRow.appendChild(userSocial);
             }
             let usersGender = document.createElement("td");
