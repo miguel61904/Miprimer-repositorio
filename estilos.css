@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #d3d4d9;
+  }
+  
+  .container {
+    width: 60%;
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .title {
+    width: 70%;
+    margin-left: 350px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Dela Gothic One", sans-serif;
+    background-image: url(https://img.autocosmos.com/noticias/fotosprinc/NAZ_b65480612b9249c0885a3ec88c5641e1.jpg);
+    color: #edeec0;
+    align-items: center;
+  }
+  
+  #addCar {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f4f7f5;
+    border: none;
+    background: #4b88a2;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+  }
+  
+  .addCar {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: center;
+    flex-wrap: nowrap;
+  }
+  
+  .field {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .field label {
+    margin-bottom: 8px;
+  }
+  
+  .field input {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 205px;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  
+  .subbtn,
+  .subbtn {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #222823;
+    color: #fff9fb;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 100px;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .btnEliminar {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #222823;
+    color: #fff9fb;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 40px;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .subbtn:hover {
+    background-color: white;
+    color: #252627;
+    transition: 0.3s ease;
+  }
+  
+  .carsList {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+  }
+  
+  .infoCar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .carContDiv {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .btnEliminar {
+    width: 25%;
+    padding: 10px;
+    border: none;
+    background-color: #222823;
+    color: #fff9fb;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 80px;
+    align-items: center;
+    border-radius: 10px;
+  }
