@@ -19,21 +19,31 @@ let funData = e =>{
     .then(respuesta => {return respuesta.json();})
     .then(datos =>{
         preguntas = datos.results;
-        iniciar(datos);
+        iniciar();
     })
 };
 
-const iniciar = (preguntas) =>{
+const iniciar = () =>{
     contpreguntas.style.display = "flex";
     formulario.style.display = "none";
     console.log(preguntas);
-    pregunta = preguntas.results;
-    let preguntaactual = pregunta[qindex];
+    let preguntaactual = preguntas[qindex];
     document.getElementById("questionName").innerText = preguntaactual.question;
 
     answers = preguntaactual.incorrect_answers.toString();
     correct = preguntaactual.correct_answer;
-    options(answers, correct)
+    
+    console.log(answers)
+    console.log(correct);
+    answersOptions = answers.split(",");
+    answersOptions.push(correct);
+    console.log(answersOptions);
+    shuffleArray(answersOptions);
+
+    for (let n = 0; n < answersOptions.length; n++) {
+      botones= document.getElementById("answersButtons").innerHTML += `<button type="button" onclick = "prengt()" >`+answersOptions[n]+`</button>`
+         
+    }
 };
 
 const  shuffleArray = (inputArray) => {
@@ -41,30 +51,14 @@ const  shuffleArray = (inputArray) => {
 }
 
 
-const options = (answers, correct) => {
-        console.log(answers)
-        console.log(correct);
-        answersOptions = answers.split(",");
-        answersOptions.push(correct);
-        console.log(answersOptions);
-        shuffleArray(answersOptions);
-
-        for (let n = 0; n < answersOptions.length; n++) {
-           document.getElementById("answersButtons").innerHTML += `<button type="button" onclick = "prengt()">`+answersOptions[n]+`</button>`
-             
-        }
-        
-    }
-
 const prengt = () =>{
     if(botones == correct){
-        puntiancion += 1;
+        puntiancion += 1
     }else{
 
     }
     qindex++;
     iniciar();
-    options();
 }
 
 
