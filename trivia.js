@@ -1,65 +1,106 @@
-let formulario = document.getElementById("triviador");
-let contpreguntas = document.getElementById("questionsContent");
-let cantidad = document.getElementById("cantidad");
-let categoria = document.getElementById("categoria");
-let dificultad = document.getElementById("dificultad");
-let tipo = document.getElementById("type");
+//Elementos HTML
+localStorage.removeItem("contador");
+localStorage.removeItem("suma_preguntas_correctas");
+localStorage.setItem("contador", 0);
+let triviaForm = document.getElementById("trivia");
+let questionsContainer = document.getElementById("questionsContent")
+let amount = document.getElementById("amount");
+let category = document.getElementById("category");
+let difficulty = document.getElementById("difficulty");
+let type = document.getElementById("type");
+
+//Variables de control 
+let correctIndexAnswer;
+let questions;
+let qIndex = 0;
+let scoreOk = 0;
 
 
-let preguntas;
-let qindex = 0;
-let answersOptions = [];
-let botones;
-let puntiancion = 0;
 
-let funData = e =>{
+//Funciones
+let getApiData = (e) => {
     e.preventDefault();
-  let url = `https://opentdb.com/api.php?amount=${cantidad.value}10&category=${categoria.value}15&difficulty=${dificultad.value}&type=${tipo.value}`;
-    fetch(url)
-    .then(respuesta => {return respuesta.json();})
-    .then(datos =>{
-        preguntas = datos.results;
-        iniciar();
-    })
+    let url = `https://opentdb.com/api.php?amount=${amount.value}&category=${category.value}&difficulty=${difficulty.value}&type=${type.value}`;
+    fetch(url).then(response => {
+        return response.json()
+    }).then(data => {
+        questions = data.results;
+        console.log(questions);
+        startGame();
+    });
 };
 
-const iniciar = () =>{
-    contpreguntas.style.display = "flex";
-    formulario.style.display = "none";
-    console.log(preguntas);
-    let preguntaactual = preguntas[qindex];
-    document.getElementById("questionName").innerText = preguntaactual.question;
+const startGame = () => {
+    questionsContainer.style.display = "flex";
+    triviaForm.style.display = "none";
+    document.getElementById("question_index").innerText = 1;
+    document.getElementById("num_questions").innerText = questions.length;
+    cambiarPregunta(0);
+};
 
-    answers = preguntaactual.incorrect_answers.toString();
-    correct = preguntaactual.correct_answer;
-    
-    console.log(answers)
-    console.log(correct);
-    answersOptions = answers.split(",");
-    answersOptions.push(correct);
-    console.log(answersOptions);
-    shuffleArray(answersOptions);
 
-    for (let n = 0; n < answersOptions.length; n++) {
-      botones= document.getElementById("answersButtons").innerHTML += `<button type="button" onclick = "prengt()" >`+answersOptions[n]+`</button>`
-         
+
+
+const btn1 = document.getElementById("1");
+const btn2 = document.getElementById("2");
+const btn3 = document.getElementById("3");
+const btn4 = document.getElementById("4");
+
+btn1.addEventListener(`click`, (event) => {
+    validarPregunta(event.target.innerText)
+});
+btn2.addEventListener(`click`, (event) => {
+    validarPregunta(event.target.innerText)
+});
+btn3.addEventListener(`click`, (event) => {
+    validarPregunta(event.target.innerText)
+});
+btn4.addEventListener(`click`, (event) => {
+    validarPregunta(event.target.innerText)
+});
+
+
+
+
+function validarPregunta(respuesta) {
+    var index = parseInt(localStorage.getItem("contador"));
+    var suma_preguntas_correctas = localStorage.getItem("suma_preguntas_correctas") ? localStorage.getItem("suma_preguntas_correctas") : 0;
+    var pregunta = questions[index];
+    if (pregunta) {
+        if (pregunta.correct_answer == respuesta) {
+            localStorage.setItem("suma_preguntas_correctas", (parseInt(suma_preguntas_correctas) + 1))
+        }
+        document.getElementById("question_index").innerText = (index + 1);
+        localStorage.setItem('contador', (index + 1));
+        if (parseInt(localStorage.getItem("contador")) === questions.length) {
+            questionsContainer.remove()
+            document.getElementById("contenedorTotal").style.display = "block";
+            document.getElementById("answerQuestionsCount").innerText = "El total de aciertos es de " + (localStorage.getItem("suma_preguntas_correctas") ? localStorage.getItem("suma_preguntas_correctas") : 0) + " de " + questions.length;
+        } else {
+            cambiarPregunta(index + 1);
+        }
     }
-};
-
-const  shuffleArray = (inputArray) => {
-    inputArray.sort(()=> Math.random() - 0.5);
 }
 
 
-const prengt = () =>{
-    if(botones == correct){
-        puntiancion += 1
-    }else{
-
+function cambiarPregunta(index) {
+    let currentQuestions = questions[index];
+    document.getElementById("questionName").innerText = currentQuestions.question;
+    if (currentQuestions.type === "boolean") {
+        document.getElementById("1").innerText = "True";
+        document.getElementById("2").innerText = "False";
+        document.getElementById("3").style.display = "none";
+        document.getElementById("4").style.display = "none";
+    } else {
+        document.getElementById("1").style.display = "Block";
+        document.getElementById("2").style.display = "Block";
+        document.getElementById("3").style.display = "Block";
+        document.getElementById("4").style.display = "Block";
+        currentQuestions.incorrect_answers.push(currentQuestions.correct_answer)
+        for (let i = 0; i <= 3; i++) {
+            document.getElementById((i + 1)).innerText = currentQuestions.incorrect_answers[i];
+        }
     }
-    qindex++;
-    iniciar();
 }
 
-
-formulario.addEventListener("submit", funData);
+triviaForm.addEventListener("submit", getApiData);
