@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="./assets/css/fijos.css">
     <link rel="stylesheet" href="miguel1.css">
-    <link rel="stylesheet" href=".\assets\css\media.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
   </head>
   <body>
     <div class="contenedor">
@@ -15,8 +16,8 @@
         <nav class="menu">
         <ul id= "main-menu">
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicioss</a></li>
-        <li><a href="#">Tecnologias</a></li>
+        <li><a href="#servicios">Servicioss</a></li>
+        <li><a href="#tecnologias">Tecnologias</a></li>
         <li><a href="#">Contacto</a></li>
         </ul>
         <button class="abrirboton" id="boton-de-inicio">Menu</button>
@@ -25,31 +26,69 @@
     </div>
     <div class="imagenes">
       <div class="encabezado">
-        <h1>Soy desarrollador</h1>
+        <hr>
+        <h2>Miguel Angel Franco</h2>
+      </hr>
+      <hr>
+        <h1>Desarrollador FullStack</h1>
+      </hr>
       </div>
       <div class="mifoto">
         <img class="logo" src=".\assets\img/mifoto.jpeg" alt="">
       </div>
     </div>
-    <div class="cseccion">
+      <section id="images">
+        <div class="container container-sticky">
+          <div class="row">
+            <div class="column-4 column-lg-6 column-md-12">
+              <img
+                src="https://www.diariodeunjugon.com/wp-content/uploads/2011/11/Zelda_skyward_sword.jpg"
+                alt="miguelon"
+              />
+            </div>
+            <div class="column-8 column-lg-6 column-md-12">
+              <h2 class="title">I Am UI / UX Designer</h2>
+              <p>
+                Soy Miguel Angel Franco, desarrollador FullStack, soy una persona
+                que le gusta trabajar en equipo, me desempeño en el desarro de paginas web
+                con tecnologias como react, HTMl5, JavaScript, Css.
+                Me gusta mucho aprender nuevas cosas y ser creativo en lo que hago.
+               </p>
+              <p>
+                Me gustan los videojuegos, tengo 2 gatos y un perro, vivo con mi mujer
+                y mis padres. 
+              </p>
+              <div class="hv"> 
+              <a href="./assets/img/MIGUEL ANGEL FRANCO VARGAS.pdf" id="link-pruebas" >Descargar HV</a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <div class="cseccion" id ="servicios">
     <section>
-      <div class="servicios">
         <div class="serh3">
         <h3>Servicios</h3>
-        <img src=".\assets\img\trabajador.jpg" alt="">
-       </div>
-        <div class="disco">
+        <img src=".\assets\img\trabajador.jpg" alt="" class="trabajador">
+    
+       <div class="iconos">
+       
         <img class = "dd" src="assets/iconos/disco-duro.svg" alt="">
         <p>Soy tecnico en mantenimiento de computadores, cuento con la capacidad de brindar soporte a equipos en sitio o de manera remorata, tengo conociminetos en telefonia IP y redes con conexión a balanceadores de carga</p>
-       <img class = "porta" src="assets/iconos/gestion-de-datos.svg" alt="">
+       
+       <div class="portatil">
+        <img class = "porta" src="assets/iconos/gestion-de-datos.svg" alt="">
         <p>Soy tecnico en mantenimiento de computadores, cuento con la capacidad de brindar soporte a equipos en sitio o de manera remorata, tengo conociminetos en telefonia IP y redes con conexión a balanceadores de carga</p>
+       </div>
+       <div class="pantalla">
         <img class="escri" src="assets/iconos/ordenador-personal%20(1).svg" alt="">
         <p>Soy tecnico en mantenimiento de computadores, cuento con la capacidad de brindar soporte a equipos en sitio o de manera remorata, tengo conociminetos en telefonia IP y redes con conexión a balanceadores de carga</p>
       </div>
       </div>
+      </div>
     </section>
   </div>
-  <section class="tecnologias">
+  <section class="tecnologias" id="tecnologias">
   <div class = "cont">
     <img src=".\assets\img\js.png" alt="">
     <h4>Java Script</h4>
@@ -69,6 +108,20 @@
     <a href="">Ver mas</a>
   </div>
   </section>
+  <div>
+  <footer class="footer">
+    <div class ="contacto">
+      <h3>Contactame</h3>
+      <p>Celular: 3154741259</p>
+      <p>Correo: miguelon1230.mf@gmail.com</p>
+    </div>
+    <div class="icon">
+      <a href="https://wa.me/573154741259?text=Hola%20Miguel%20estoy%20interesado%20en%20tus%20servicios"><img src="./assets/iconos/whatsapp (3).svg" alt=""></a>
+      <a href="https://www.facebook.com/miguel61904/"><img src="./assets/iconos/facebook.svg" alt=""></a>
+      <a href="https://github.com/miguel61904/Miprimer-repositorio"><img src="./assets/iconos/github.svg" alt=""></a>
+    </div>
+  </div>
+  </footer>
     <script src="C:\Users\migue\Downloads\Academlo\HTML y CSS\Portafolio\assets\js\menu.js">
     </script>
   </body>

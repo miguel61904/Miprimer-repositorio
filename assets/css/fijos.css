@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/encabezado.png");
+  }
+
+  nav{
+    color: white;
+  }
+
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+  h1{
+    color:white;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  header{
+    color: white;
+    background-color: #353535;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+  }
