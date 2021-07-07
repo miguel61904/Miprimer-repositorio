@@ -65,9 +65,9 @@
 }
 
 .encabezado{
-  height: 350px;
+  height: 910px;
   width: 100%;
-  background-image: url("assets/img/codigojs.jpg");
+  background: black;
   position: absolute;
   flex-direction: row;
   display: flex;
@@ -76,6 +76,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  font-family: ubuntu, sans-serif;
 }
 .cseccion{
   position: relative;
@@ -86,7 +87,8 @@
   border-color: white;
   border-radius: 5px;
   margin-top: 100px;
-  background-color: rgba(255,255,255, .5)
+  background-color: rgba(255,255,255, .5);
+  font-family: Merriweather, sans-serif;
 }
 
 .dd{
@@ -120,7 +122,7 @@
   height: 550px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .cont{
@@ -161,6 +163,7 @@
 .row {
   display: flex;
   flex-wrap: nowrap;
+  margin-top: 600px;
 }
 
 /* ¿qué porcentaje es 4 de un total de 12? */
@@ -179,6 +182,7 @@
   align-items: center;
   color: rgb(184, 118, 56);
   flex-wrap: wrap;
+  font-family: Merriweather, sans-serif;
 }
 .container {
   width: 90%;
@@ -212,3 +216,4 @@
   height: 40px;
   width: 40px;
 }
+

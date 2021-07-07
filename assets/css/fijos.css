@@ -6,7 +6,7 @@
   body{
     width: 100%;
     height: 100%;
-    background-image: url("../img/encabezado.png");
+    background: rgb(22, 22, 22);
   }
 
   nav{
@@ -28,6 +28,25 @@
     color:white;
     justify-content: center;
     align-content: center;
+    position: relative;
+    float: left;
+  }
+  h1 span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background:black;
+    border-left: 1px solid white;
+    animation: maquina 5s infinite alternate steps(24);
+  }
+
+  @keyframes maquina {
+    from{
+      width: 0;
+    }
+    to{
+      width: 100%;
+    }
   }
   
   header{
@@ -37,6 +56,7 @@
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
   }

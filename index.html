@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="./assets/css/fijos.css">
     <link rel="stylesheet" href="miguel1.css">
     <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="contenedor">
@@ -18,7 +24,8 @@
         <li><a href="#">Inicio</a></li>
         <li><a href="#servicios">Servicioss</a></li>
         <li><a href="#tecnologias">Tecnologias</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li class="contacto"><a href="#" id = "contacto">Contacto</a>
+        </li>
         </ul>
         <button class="abrirboton" id="boton-de-inicio">Menu</button>
       </nav>
@@ -26,15 +33,12 @@
     </div>
     <div class="imagenes">
       <div class="encabezado">
-        <hr>
         <h2>Miguel Angel Franco</h2>
-      </hr>
-      <hr>
-        <h1>Desarrollador FullStack</h1>
+        <h1> Desarrollador FullStack<span>&#160;</span></h1>
       </hr>
       </div>
       <div class="mifoto">
-        <img class="logo" src=".\assets\img/mifoto.jpeg" alt="">
+        <img class="logo" src=".\assets\img/mifoto.jpg" alt="">
       </div>
     </div>
       <section id="images">
@@ -42,7 +46,7 @@
           <div class="row">
             <div class="column-4 column-lg-6 column-md-12">
               <img
-                src="https://www.diariodeunjugon.com/wp-content/uploads/2011/11/Zelda_skyward_sword.jpg"
+                src="./assets/img/mifoto2.jpg"
                 alt="miguelon"
               />
             </div>
@@ -55,8 +59,8 @@
                 Me gusta mucho aprender nuevas cosas y ser creativo en lo que hago.
                </p>
               <p>
-                Me gustan los videojuegos, tengo 2 gatos y un perro, vivo con mi mujer
-                y mis padres. 
+                Me gustan los videojuegos, hacer deportes, salir a caminar y considero que tengo
+                la suficiente confianza para desarrollar cualquier labor asignada.  
               </p>
               <div class="hv"> 
               <a href="./assets/img/MIGUEL ANGEL FRANCO VARGAS.pdf" id="link-pruebas" >Descargar HV</a>
@@ -78,37 +82,38 @@
        
        <div class="portatil">
         <img class = "porta" src="assets/iconos/gestion-de-datos.svg" alt="">
-        <p>Soy tecnico en mantenimiento de computadores, cuento con la capacidad de brindar soporte a equipos en sitio o de manera remorata, tengo conociminetos en telefonia IP y redes con conexión a balanceadores de carga</p>
+        <p>Soy desarrollador web, cuento con competencias y habilidades en diferentes leguajes de programación Front y Backend</p>
        </div>
        <div class="pantalla">
         <img class="escri" src="assets/iconos/ordenador-personal%20(1).svg" alt="">
-        <p>Soy tecnico en mantenimiento de computadores, cuento con la capacidad de brindar soporte a equipos en sitio o de manera remorata, tengo conociminetos en telefonia IP y redes con conexión a balanceadores de carga</p>
+        <p>Cuento con diferentes proyectos de programación dentro de los cuales se puede visualizar algunos en este potafolio para dar credivilidad del conocimiento el cual continuaré puliendo con el paso de mi desarrollo</p>
       </div>
       </div>
       </div>
     </section>
   </div>
+  <div class="tecno">
   <section class="tecnologias" id="tecnologias">
   <div class = "cont">
-    <img src=".\assets\img\js.png" alt="">
-    <h4>Java Script</h4>
-    <p>Es un excelente lenguaje de programacion el cual es usado para brindar efectos en las paginas</p>
-    <a href="">Ver mas</a>
+    <img src=".\assets\img\trivia.png" alt="">
+    <h4>Trivia</h4>
+    <p>Consite en un juego de trivia el cual cuenta con un marcador de puntaje final, para competir con familiares o amigos</p>
+    <a href="https://github.com/miguel61904/Miprimer-repositorio/tree/Trivia">Ver mas</a>
   </div>
   <div class = "cont">
-    <img src=".\assets\img\html5.png" alt="">
-    <h4>HTML5</h4>
-    <p>Es un excelente lenguaje de programacion el cual es usado para brindar efectos en las paginas</p>
-    <a href="">Ver mas</a>
+    <img src=".\assets\img\crud.png" alt="">
+    <h4>Crud carros</h4>
+    <p>Es espacio para agregar vehiculos a una tabla, la misma cuenta con opciones de elminar o agregar</p>
+    <a href="https://github.com/miguel61904/Miprimer-repositorio/tree/crud-carro">Ver mas</a>
   </div>
   <div class = "cont">
-    <img src=".\assets\img\css3.jpg" alt="">
-    <h4>CSS3</h4>
-    <p>Es un excelente lenguaje de programacion el cual es usado para brindar efectos en las paginas</p>
-    <a href="">Ver mas</a>
+    <img src=".\assets\img\bar.png" alt="">
+    <h4>BarHalla</h4>
+    <p>es un proyecto personal de una empresar realizada compañeros y yo la cual es un bar </p>
+    <a href="https://github.com/miguel61904/Miprimer-repositorio/tree/crud-carro">Ver mas</a>
   </div>
   </section>
-  <div>
+</div>
   <footer class="footer">
     <div class ="contacto">
       <h3>Contactame</h3>
@@ -120,7 +125,6 @@
       <a href="https://www.facebook.com/miguel61904/"><img src="./assets/iconos/facebook.svg" alt=""></a>
       <a href="https://github.com/miguel61904/Miprimer-repositorio"><img src="./assets/iconos/github.svg" alt=""></a>
     </div>
-  </div>
   </footer>
     <script src="C:\Users\migue\Downloads\Academlo\HTML y CSS\Portafolio\assets\js\menu.js">
     </script>
