@@ -1,4 +1,8 @@
-
+@media screen and (max-width: 960px) {
+  .iconos{
+    font-size: 10px;
+  }
+}
 
 @media screen and (max-width: 960px) {
   .column-lg-6 {
