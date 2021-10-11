@@ -69,35 +69,37 @@
   justify-content: space-around;
   border-radius: 5px;
   margin-top: 200px;
+  align-items: center;
 }
 .iconos{
   color:white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 .dd{
   height: 50px;
   width: 50px;
   margin-top: 10px;
-  flex-wrap: wrap;
 }
 .porta{
   height: 50px;
   width: 50px;
   margin-top: 10px;
-  flex-wrap: wrap;
 }
 .escri{
   height: 50px;
   width: 50px;
   margin-top: 10px;
-  flex-wrap: wrap;
-}
-.serh3{
-  text-align: center;
 }
 .trabajador{
   height: 300px;
   width: 300px;
+  margin-left: 10px;
   border-radius: 5px;
 }
 .tecnologias{
