@@ -1,9 +1,6 @@
 .contenedor{
   background: black;
   width: 100%;
-
-
-
   /* flex*/
   display: flex;
   flex-direction: row;
@@ -52,11 +49,12 @@
   position: relative;
   display: flex;
   justify-content: center;
-}
-.mifoto{
-  position: absolute;
-  width: 250px;
-  top: 200px;
+  height: 910px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  font-family: ubuntu, sans-serif;
+  align-content: center;
   align-items: center;
 }
 .logo{
@@ -64,33 +62,18 @@
   border-radius: 50%;
 }
 
-.encabezado{
-  height: 910px;
-  width: 100%;
-  background: black;
-  position: absolute;
-  flex-direction: row;
-  display: flex;
-  align-content: center;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: ubuntu, sans-serif;
-}
+
 .cseccion{
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border: solid;
-  border-color: white;
+  justify-content: space-around;
   border-radius: 5px;
-  margin-top: 100px;
-  background-color: rgba(255,255,255, .5);
-  font-family: Merriweather, sans-serif;
+  margin-top: 200px;
 }
-
+.iconos{
+  color:white;
+  text-align: center;
+}
 .dd{
   height: 50px;
   width: 50px;
@@ -123,6 +106,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
+  margin-top: 200px;
 }
 
 .cont{
@@ -141,6 +125,7 @@
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 .cont img{
+  margin-top: 10px;
   width: 250px;
   height: 220px;
 }
@@ -157,13 +142,19 @@
 .cont a{
   font-weight: 500;
   text-decoration: none;
-  color: blue;
+  background-color: rgb(167, 67, 67);
+  border-radius: 5px;
+  border: solid white;
+  color: white;
+  transition: all, 0.5s;
 }
-
+.cont a:hover{
+  background-color: rgb(168, 18, 18);
+}
 .row {
   display: flex;
   flex-wrap: nowrap;
-  margin-top: 600px;
+  margin-top: 200px;
 }
 
 /* ¿qué porcentaje es 4 de un total de 12? */
@@ -180,7 +171,7 @@
   padding: 16px;
   display: flex;
   align-items: center;
-  color: rgb(184, 118, 56);
+  color: white;
   flex-wrap: wrap;
   font-family: Merriweather, sans-serif;
 }

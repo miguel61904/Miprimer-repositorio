@@ -1,0 +1,39 @@
+.mifoto2{ 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 3px;}
+
+@keyframes mifoto2 {
+    0%{
+        width: 33.333%;
+        height: 0;
+        ooverflow: hidden;
+        transform: translateX(10%);
+    }
+    100%{
+        height: 100%;
+        overflow:visible;
+        transform: translateX(0%);
+    }
+}
+
+.foto1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    animation-name: olas;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    height: 210px;
+    width: 170px;
+    margin-right: 10px;
+}
+@keyframes olas{
+    0%   {background-color:white; height: 200px;}
+    25%  { height: 205px; width: 150px;}
+    50%  { height:210px; width: 170px;}
+    75%  {background-color:gray; }
+    100% {background-color:rgb(110, 5, 5); left:0px; top:0px;}
+}
